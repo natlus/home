@@ -3,6 +3,11 @@
   import PhotoGrid from '$components/PhotoGrid.svelte';
 </script>
 
+<svelte:head>
+  <title>photos • natlus</title>
+</svelte:head>
+
+
 <Modal width="900px" height="auto">
   <svelte:fragment slot="title">
     <h3>Photos 📷</h3>
