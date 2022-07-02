@@ -34,6 +34,10 @@
     .join('');
 </script>
 
+<svelte:head>
+  <title>Kira • natlus</title>
+</svelte:head>
+
 <Modal width="500px">
   <svelte:fragment slot="title">
     <h3>Kira 🐶</h3>

@@ -42,7 +42,7 @@
     >
   </Button>
 
-  <Button href="/kira">Kira</Button>
+  <Button href="/dog">Kira</Button>
 </nav>
 
 <slot />
