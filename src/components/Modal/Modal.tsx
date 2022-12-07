@@ -1,7 +1,5 @@
-'use client';
-
 import styles from './Modal.module.css';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 type Props = {
   title: string;
