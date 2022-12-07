@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'React';
 import Button from '../Button/Button';
 import styles from './Nav.module.css';
 import cn from 'classnames';
