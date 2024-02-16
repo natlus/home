@@ -1,17 +1,20 @@
-import cn from 'classnames';
-import styles from './button.module.css';
 import Link from 'next/link';
 
 type Props = {
   href?: string;
   onClick?: () => void;
+  children: React.ReactNode;
 };
 
-const Button: React.FC<React.PropsWithChildren & Props> = ({ children, href, onClick }) => {
+const Button = ({ children, href, onClick }: Props) => {
   const Component = href ? Link : 'button';
 
   return (
-    <Component href={href || ''} onClick={onClick} className={cn(styles.btn)}>
+    <Component
+      href={href || ''}
+      onClick={onClick}
+      className="relative inline-flex items-center p-2 text-inherit"
+    >
       {children}
     </Component>
   );
