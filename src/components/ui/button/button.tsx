@@ -43,7 +43,7 @@ const Button = ({ children, href, onClick, square = false }: Props) => {
         dangerouslySetInnerHTML={{
           __html: `
           .${id}::after {
-            background: linear-gradient(${deg}deg, #ff0080, #7928CA);
+            background: linear-gradient(${deg}deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
           }
         `
         }}
