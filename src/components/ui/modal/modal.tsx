@@ -1,4 +1,4 @@
-import styles from './Modal.module.css';
+import styles from './modal.module.css';
 import Link from 'next/link';
 
 type Props = {

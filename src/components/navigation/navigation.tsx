@@ -1,7 +1,7 @@
 'use client';
 
-import Button from '../Button/Button';
-import styles from './Nav.module.css';
+import Button from '../ui/button/button';
+import styles from './navigation.module.css';
 import cn from 'classnames';
 import { usePathname } from 'next/navigation';
 

@@ -1,4 +1,4 @@
-import styles from './Sky.module.css';
+import styles from './sky.module.css';
 import cn from 'classnames';
 
 function rand() {

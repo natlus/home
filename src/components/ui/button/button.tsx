@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import styles from './Button.module.css';
+import styles from './button.module.css';
 import Link from 'next/link';
 
 type Props = {
