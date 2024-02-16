@@ -1,7 +1,6 @@
 'use client';
 
-import cn from 'classnames';
-import Button from '../ui/button/button';
+import Button from '@/ui/button/button';
 
 const Nav: React.FC = () => {
   return (

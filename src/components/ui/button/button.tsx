@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, RefObject } from 'react';
 import { v4 as uuid } from 'uuid';
 
 import Link from 'next/link';
@@ -15,7 +15,7 @@ const gradientBorder =
   'after:opacity-0 after:absolute after:z-[-1] after:left-[-2px] after:block after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:rounded-full after:transition-opacity';
 
 const Button = ({ children, href, onClick, square = false }: Props) => {
-  const [id, setId] = useState();
+  const [id, setId] = useState<string>('');
 
   useEffect(() => {
     setId(uuid().replace(/[0-9]/g, ''));
@@ -50,10 +50,12 @@ const Button = ({ children, href, onClick, square = false }: Props) => {
       />
 
       <Component
-        ref={ref}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        ref={ref as RefObject<HTMLButtonElement | HTMLAnchorElement>}
         href={href || ''}
         onClick={onClick}
-        className={`${id} shadow-btn relative inline-flex items-center rounded-full bg-[rgba(0,0,0,0.8)] text-inherit hover:after:opacity-[1] ${gradientBorder} ${square ? 'p-2' : 'px-6 py-2'}`}
+        className={`${id} relative inline-flex items-center rounded-full bg-[rgba(0,0,0,0.8)] text-inherit shadow-btn hover:after:opacity-[1] ${gradientBorder} ${square ? 'p-2' : 'px-6 py-2'}`}
       >
         {children}
       </Component>
