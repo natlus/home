@@ -4,7 +4,7 @@ import Button from '@/ui/button/button';
 
 const Nav: React.FC = () => {
   return (
-    <nav className="fixed left-4 top-4 z-10 grid grid-flow-col gap-3">
+    <nav className="fixed left-4 top-4 z-10 flex flex-row gap-3">
       <Button square href="https://github.com/natlus">
         <svg
           xmlns="http://www.w3.org/2000/svg"
