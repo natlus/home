@@ -13,7 +13,7 @@ function createStars(n: number) {
 const Sky: React.FC<React.PropsWithChildren> = ({ children }) => {
   const starsSmall = createStars(500);
   const starsMedium = createStars(200);
-  const starsLarge = createStars(25);
+  const starsLarge = createStars(50);
 
   return (
     <div className={styles.skybox}>

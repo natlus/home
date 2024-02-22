@@ -12,7 +12,7 @@
 .small {
   height: 1px;
   width: 1px;
-  animation: animateStars 150s linear infinite;
+  animation: animateStars 300s linear infinite;
   position: relative;
 }
 .small:after {
@@ -22,7 +22,7 @@
   width: 1px;
   height: 1px;
   box-shadow: inherit;
-  animation: animateStars 150s linear infinite;
+  animation: animateStars 300s linear infinite;
   border-radius: 5px;
 }
 .medium {
@@ -43,7 +43,7 @@
 .large {
   height: 4px;
   width: 4px;
-  animation: animateStars 300s linear infinite;
+  animation: animateStars 150s linear infinite;
 }
 .large:after {
   content: ' ';
@@ -52,7 +52,7 @@
   width: 4px;
   height: 4px;
   box-shadow: inherit;
-  animation: animateStars 300s linear infinite;
+  animation: animateStars 150s linear infinite;
   border-radius: 5px;
 }
 @keyframes animateStars {
