@@ -12,7 +12,7 @@ type Props = {
 };
 
 const gradientBorder =
-  'after:opacity-0 after:absolute after:z-[-1] after:left-[-2px] after:block after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:rounded-full after:transition-opacity';
+  'after:opacity-0 after:absolute after:z-[-1] after:left-[-2px] after:block after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:rounded-full after:transition-opacity after:duration-500';
 
 const gradientShadow =
   'before:opacity-0 before:absolute before:z-[-1] before:left-[-2px] before:block before:h-[calc(100%+4px)] before:w-[calc(100%+4px)] before:rounded-full before:transition-opacity before:blur-lg';
