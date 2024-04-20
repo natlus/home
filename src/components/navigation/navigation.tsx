@@ -2,7 +2,7 @@
 
 import Button from '@/ui/button/button';
 
-const Nav: React.FC = () => {
+function Nav() {
   return (
     <nav className="fixed left-4 top-4 z-10 flex flex-row gap-3">
       <Button square href="https://github.com/natlus">
@@ -25,6 +25,6 @@ const Nav: React.FC = () => {
       {/* <Button href="https://github.com/natlus">Something</Button> */}
     </nav>
   );
-};
+}
 
 export default Nav;
