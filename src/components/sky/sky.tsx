@@ -1,8 +1,8 @@
 import styles from './sky.module.css';
 import cn from 'classnames';
 
-function rand() {
-  return Math.floor(Math.random() * (2000 - 1) + 1);
+function rand(max: number = 2000) {
+  return Math.floor(Math.random() * (max - 1) + 1);
 }
 
 function createStars(n: number) {
@@ -11,9 +11,9 @@ function createStars(n: number) {
 }
 
 const Sky: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const starsSmall = createStars(500);
-  const starsMedium = createStars(200);
-  const starsLarge = createStars(50);
+  const starsSmall = createStars(300);
+  const starsMedium = createStars(150);
+  const starsLarge = createStars(20);
 
   return (
     <div className={styles.skybox}>
@@ -29,6 +29,16 @@ const Sky: React.FC<React.PropsWithChildren> = ({ children }) => {
         className={cn(styles.starset, styles.large)}
         style={{ boxShadow: starsLarge.join(',') }}
       />
+      {[...new Array(rand(10))].map((index) => (
+        <div
+          key={index}
+          className={cn(styles.shootingStar, Math.random() > 0.5 ? styles.left : styles.right)}
+          style={{
+            animationDelay: `${rand(10000)}s`,
+            top: `${Math.random() > 0.5 ? '-' : '+'}${rand(500)}px`
+          }}
+        />
+      ))}
       {children}
     </div>
   );

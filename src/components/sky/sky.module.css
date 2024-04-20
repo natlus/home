@@ -1,65 +1,110 @@
 .skybox {
-  height: calc(100vh);
-  overflow: hidden;
-  background-color: rgb(10, 10, 10);
+    height: calc(100vh);
+    overflow: hidden;
+    background-color: rgb(10, 10, 10);
 }
 
 .starset {
-  background: transparent;
-  border-radius: 5px;
+    background: transparent;
+    border-radius: 5px;
 }
 
 .small {
-  height: 1px;
-  width: 1px;
-  animation: animateStars 300s linear infinite;
-  position: relative;
+    height: 2px;
+    width: 2px;
+    animation: animateStars 2000s linear infinite;
+    position: relative;
 }
 .small:after {
-  content: ' ';
-  position: absolute;
-  top: 2000px;
-  width: 1px;
-  height: 1px;
-  box-shadow: inherit;
-  animation: animateStars 300s linear infinite;
-  border-radius: 5px;
+    content: "' '";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    box-shadow: inherit;
+    animation: animateStars 2000s linear infinite;
+    border-radius: 5px;
 }
 .medium {
-  height: 2px;
-  width: 2px;
-  animation: animateStars 200s linear infinite;
+    height: 3px;
+    width: 3px;
+    animation: animateStars 1500s linear infinite;
 }
 .medium:after {
-  content: "' '";
-  position: absolute;
-  top: 2000px;
-  width: 2px;
-  height: 2px;
-  box-shadow: inherit;
-  animation: animateStars 200s linear infinite;
-  border-radius: 5px;
+    content: "' '";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    box-shadow: inherit;
+    animation: animateStars 1500s linear infinite;
+    border-radius: 5px;
 }
 .large {
-  height: 4px;
-  width: 4px;
-  animation: animateStars 150s linear infinite;
+    height: 4px;
+    width: 4px;
+    animation:
+        animateStars 750s linear infinite,
+        twinkle 1s infinite;
 }
 .large:after {
-  content: ' ';
-  position: absolute;
-  top: 100px;
-  width: 4px;
-  height: 4px;
-  box-shadow: inherit;
-  animation: animateStars 150s linear infinite;
-  border-radius: 5px;
+    content: "' '";
+    position: absolute;
+    top: 2000px;
+    width: 4px;
+    height: 4px;
+    box-shadow: inherit;
+    animation:
+        animateStars 750s linear infinite,
+        twinkle 2s infinite;
+    border-radius: 5px;
 }
+
+.shootingStar {
+    width: 2px;
+    height: 50px;
+    opacity: 0;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.5), transparent);
+    position: absolute;
+}
+
+.left {
+    right: 25%;
+    animation: shootLeft 3s linear 1;
+}
+
+.right {
+    left: 25%;
+    animation: shootRight 3s linear 1;
+}
+
 @keyframes animateStars {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2000px);
-  }
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+@keyframes shootRight {
+    from {
+        transform: rotate(-55deg) translateY(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: rotate(-55deg) translateY(3000px);
+        opacity: 0;
+    }
+}
+
+@keyframes shootLeft {
+    from {
+        transform: rotate(55deg) translateY(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: rotate(55deg) translateY(3000px);
+        opacity: 0;
+    }
 }
