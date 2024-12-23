@@ -10,7 +10,7 @@ function createStars(n: number) {
   return values.map(() => `${rand()}px ${rand()}px 1px rgba(255,255,255,0.45)`);
 }
 
-const Sky: React.FC<React.PropsWithChildren> = ({ children }) => {
+const Sky = ({ children }: { children?: React.ReactNode }) => {
   const starsSmall = createStars(300);
   const starsMedium = createStars(150);
   const starsLarge = createStars(20);
@@ -29,9 +29,9 @@ const Sky: React.FC<React.PropsWithChildren> = ({ children }) => {
         className={cn(styles.starset, styles.large)}
         style={{ boxShadow: starsLarge.join(',') }}
       />
-      {[...new Array(rand(10))].map((index) => (
+      {[...new Array(rand(10))].map((_, index) => (
         <div
-          key={index}
+          key={`sky-${index}`}
           className={cn(styles.shootingStar, Math.random() > 0.5 ? styles.left : styles.right)}
           style={{
             animationDelay: `${rand(10000)}s`,
