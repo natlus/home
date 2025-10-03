@@ -6,14 +6,14 @@ import GitHubRepoFiles from "../components/GitHubRepoFiles.astro";
 ---
 
 <Layout>
-    <div class="flex flex-col gap-1">
-        <Prompt>ls ~/external-links</Prompt>
+    <div class="flex flex-col gap-05">
+        <Prompt>links</Prompt>
         <Result>
             <a href="https://github.com/natlus">github</a>
             <a href="https://github.com/natlus/dotfiles">dotfiles</a>
         </Result>
 
-        <Prompt>cat ~/about.txt</Prompt>
+        <Prompt>about</Prompt>
         <Result>
             <ul>
                 <li>software dev</li>
@@ -28,14 +28,33 @@ import GitHubRepoFiles from "../components/GitHubRepoFiles.astro";
 
         <div class="flex items-center">
             <Prompt />
-            <span class="mx-1 inline-flex animate-cursor bg-white border-white h-2 w-1"></span>
+            <span class="mx-1 inline-flex animate-cursor border-[#F6C99F] bg-[#F6C99F] h-2 w-1"></span>
         </div>
     </div>
 </Layout>
 
 <style>
-    a:hover {
-        text-decoration: underline;
+    a {
+        position: relative;
+    }
+
+    a::before {
+        content: "[";
+        display: none;
+        position: absolute;
+        left: -0.5rem;
+    }
+
+    a::after {
+        content: "]";
+        display: none;
+        position: absolute;
+        right: -0.5rem;
+    }
+
+    a:hover::after,
+    a:hover::before {
+        display: inline;
     }
 
     ul {
