@@ -5,7 +5,7 @@
     --font-logo: "Outfit";
     --font-mono: "Geist Mono Variable", "monospace";
 
-    --animate-cursor: cursor 1.25s linear infinite;
+    --animate-cursor: cursor 1s linear infinite;
 
     @keyframes cursor {
         25% {
