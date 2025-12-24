@@ -1,67 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Prompt from "../components/Prompt.astro";
-import Result from "../components/Result.astro";
-import GitHubRepoFiles from "../components/GitHubRepoFiles.astro";
+
+import { Computer } from "@lucide/astro";
+import { MapPinHouse } from "@lucide/astro";
 ---
 
 <Layout>
-    <div class="flex flex-col gap-05">
-        <Prompt>links</Prompt>
-        <Result>
-            <a href="https://github.com/natlus">github</a>
-            <a href="https://github.com/natlus/dotfiles">dotfiles</a>
-        </Result>
+    <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-05">
+            <p class="flex items-center gap-1"><Computer size={16} /> software developer @ Sveriges Radio.</p>
+            <p class="flex items-center gap-1"><MapPinHouse size={16} /> Malmö, Sweden.</p>
+        </div>
 
-        <Prompt>about</Prompt>
-        <Result>
-            <ul>
-                <li>software dev</li>
-                <li>malmö, sweden</li>
-            </ul>
-        </Result>
+        <div class="flex flex-col gap-2">
+            <div class="relative">
+                <div
+                    class="grid grid-cols-[auto_auto_1fr_125px] items-center after:h-px after:w-full after:bg-primary/20 after:absolute after-z-1"
+                >
+                    <span class="bg-white dark:bg-black z-2 pr-1">Sveriges Radio</span>
+                    <span class="bg-white dark:bg-black text-muted z-2 px-1">fullstack developer</span>
+                    <span></span>
+                    <span class="bg-white dark:bg-black ml-auto z-2 w-full pl-1">2022-</span>
+                </div>
+            </div>
 
-        <!-- <Prompt>ls ~/projects/dotfiles</Prompt>
-        <Result>
-            <GitHubRepoFiles owner="natlus" repo="dotfiles" />
-        </Result> -->
+            <div class="relative">
+                <div
+                    class="grid grid-cols-[auto_auto_1fr_125px] items-center after:h-px after:w-full after:bg-primary/20 after:absolute after-z-1"
+                >
+                    <span class="bg-white dark:bg-black z-2 pr-1">Prisjakt</span>
+                    <span class="bg-white dark:bg-black text-muted z-2 px-1">web developer</span>
+                    <span></span>
+                    <span class="bg-white dark:bg-black ml-auto z-2 w-full pl-1">2017-2022</span>
+                </div>
+            </div>
 
-        <div class="flex items-center">
-            <Prompt />
-            <span class="mx-1 inline-flex animate-cursor border-[#F6C99F] bg-[#F6C99F] h-2 w-1"></span>
+            <div class="relative">
+                <div
+                    class="grid grid-cols-[auto_auto_1fr_125px] items-center after:h-px after:w-full after:bg-primary/20 after:absolute after-z-1"
+                >
+                    <span class="bg-white dark:bg-black z-2 pr-1">Nortech</span>
+                    <span class="bg-white dark:bg-black text-muted z-2 px-1">web developer</span>
+                    <span></span>
+                    <span class="bg-white dark:bg-black ml-auto z-2 w-full pl-1">2015-2017</span>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>
-
-<style>
-    a {
-        position: relative;
-    }
-
-    a::before {
-        content: "[";
-        display: none;
-        position: absolute;
-        left: -0.5rem;
-    }
-
-    a::after {
-        content: "]";
-        display: none;
-        position: absolute;
-        right: -0.5rem;
-    }
-
-    a:hover::after,
-    a:hover::before {
-        display: inline;
-    }
-
-    ul {
-        padding-left: 1rem;
-    }
-
-    li {
-        list-style-type: square;
-    }
-</style>

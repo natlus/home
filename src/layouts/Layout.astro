@@ -1,9 +1,10 @@
 ---
-import StarrySky from "../components/StarrySky.astro";
 import "@fontsource/poppins";
 import "@fontsource/outfit";
 import "@fontsource-variable/bricolage-grotesque";
 import "@fontsource-variable/geist-mono";
+
+import Header from "../components/Header.astro";
 
 import "../styles/global.css";
 ---
@@ -17,22 +18,13 @@ import "../styles/global.css";
         <meta name="generator" content={Astro.generator} />
         <title>natlus</title>
     </head>
-    <body class="p-3">
-        <StarrySky />
 
-        <main class="bg-[#101010]/80 h-full py-1 px-2 border-1 border-white/5 rounded-md">
-            <article class="font-mono flex items-center gap-1 py-1">
+    <body class="px-2">
+        <main class="max-w-100 mx-auto">
+            <Header />
+            <article class="font-mono py-4">
                 <slot />
             </article>
         </main>
     </body>
-
-    <style>
-        .link:hover {
-            text-decoration: underline;
-        }
-        .link::before {
-            content: "/";
-        }
-    </style>
 </html>

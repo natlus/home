@@ -9,7 +9,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.2",
     "@fontsource-variable/bricolage-grotesque": "^5.2.10",
     "@fontsource-variable/geist-mono": "^5.2.7",
@@ -23,7 +22,7 @@
     "astro": "^5.16.6",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "tailwindcss": "^4.1.18",
-    "uuid": "^13.0.0"
+    "react-hotkeys-hook": "^5.2.1",
+    "tailwindcss": "^4.1.18"
   }
 }

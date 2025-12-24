@@ -4,17 +4,10 @@
     --font-sans: "Bricolage Grotesque Variable", "sans-serif";
     --font-logo: "Outfit";
     --font-mono: "Geist Mono Variable", "monospace";
-
-    --animate-cursor: cursor 1s linear infinite;
-
-    @keyframes cursor {
-        25% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 0;
-        }
-    }
+    --color-peppermint: var(--peppermint);
+    --color-orange: var(--orange);
+    --color-primary: #fff;
+    --color-muted: var(--color-zinc-500);
 }
 
 @layer utilities {
@@ -52,18 +45,6 @@
     }
 }
 
-:root {
-    font-size: 16px;
-    --bg-primary: rgb(24, 10, 53);
-    --bg-elevated: rgba(255, 255, 255, 0.03);
-    --ol-elevated: rgba(255, 255, 255, 0.35);
-    --fg-primary: rgba(255, 255, 255, 0.8);
-    --radius: 10px;
-    --drop-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --spacing: 8px;
-    --backdrop-filter: blur(1px);
-}
-
 html,
 body {
     margin: 0;
@@ -71,16 +52,27 @@ body {
     height: 100%;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 * {
     box-sizing: border-box;
 }
 
+:root {
+    font-size: 16px;
+    --radius: 10px;
+    --drop-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --spacing: 8px;
+    --backdrop-filter: blur(1px);
+
+    --peppermint: #99ffe4;
+    --orange: #ff7f20;
+}
+
 @media (prefers-color-scheme: dark) {
+    :root {
+        --peppermint: #99ffe4;
+        --orange: #ffc799;
+    }
+
     html {
         color-scheme: dark;
     }
@@ -88,4 +80,11 @@ a {
         color: white;
         background: black;
     }
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 1px solid var(--color-peppermint);
+    outline-offset: 4px;
+    border-radius: 1px;
 }
