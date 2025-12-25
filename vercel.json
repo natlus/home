@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/mobtimer/:path*",
+      "destination": "https://mobtimer-ol.vercel.app/:path*"
+    }
+  ]
+}
