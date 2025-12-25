@@ -15,7 +15,7 @@ export default function NavLink({
   });
 
   return (
-    <a href={href} className="font-mono flex flex-row gap-[2px] hover:text-orange transition-colors duration-200">
+    <a href={href} className="font-mono flex flex-row gap-[2px]">
       {children}
     </a>
   );

@@ -72,6 +72,15 @@ body {
     }
 }
 
+a {
+    transition: color 200ms ease;
+    color: var(--color-orange);
+}
+
+a:hover {
+    color: var(--color-peppermint);
+}
+
 a:focus-visible,
 button:focus-visible {
     outline: 1px solid var(--color-peppermint);
