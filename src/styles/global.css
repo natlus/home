@@ -1,89 +1,89 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Bricolage Grotesque Variable", "sans-serif";
-    --font-logo: "Outfit";
-    --font-mono: "Geist Mono Variable", "monospace";
-    --color-peppermint: var(--peppermint);
-    --color-orange: var(--orange);
-    --color-primary: #fff;
-    --color-muted: var(--color-zinc-500);
+  --font-sans: "Bricolage Grotesque Variable", "sans-serif";
+  --font-logo: "Outfit";
+  --font-mono: "Geist Mono Variable", "monospace";
+  --color-peppermint: var(--peppermint);
+  --color-orange: var(--orange);
+  --color-primary: #fff;
+  --color-muted: var(--color-zinc-500);
 }
 
 @layer utilities {
-    h1 {
-        @apply text-xl;
-        @apply mb-2;
-        @apply underline;
-    }
-    h2 {
-        @apply text-xl;
-        @apply mb-2;
-        @apply underline;
-    }
-    h3 {
-        @apply text-3xl;
-        @apply mb-2;
-    }
-    h4 {
-        @apply text-2xl;
-        @apply mb-2;
-    }
-    h5 {
-        @apply text-xl;
-        @apply mb-2;
-    }
+  h1 {
+    @apply text-xl;
+    @apply mb-2;
+    @apply underline;
+  }
+  h2 {
+    @apply text-xl;
+    @apply mb-2;
+    @apply underline;
+  }
+  h3 {
+    @apply text-3xl;
+    @apply mb-2;
+  }
+  h4 {
+    @apply text-2xl;
+    @apply mb-2;
+  }
+  h5 {
+    @apply text-xl;
+    @apply mb-2;
+  }
 }
 
 html,
 body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    font-size: 16px;
-    --radius: 10px;
-    --drop-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --spacing: 8px;
-    --backdrop-filter: blur(1px);
+  font-size: 16px;
+  --radius: 10px;
+  --drop-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --spacing: 8px;
+  --backdrop-filter: blur(1px);
 
-    --peppermint: #99ffe4;
-    --orange: #ff7f20;
+  --peppermint: #99ffe4;
+  --orange: #ff7f20;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --peppermint: #99ffe4;
-        --orange: #ffc799;
-    }
+  :root {
+    --peppermint: #99ffe4;
+    --orange: #ffc799;
+  }
 
-    html {
-        color-scheme: dark;
-    }
-    body {
-        color: white;
-        background: black;
-    }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
 }
 
 a {
-    transition: color 200ms ease;
-    color: var(--color-orange);
+  transition: color 200ms ease;
+  color: var(--color-orange);
 }
 
 a:hover {
-    color: var(--color-peppermint);
+  color: var(--color-peppermint);
 }
 
 a:focus-visible,
 button:focus-visible {
-    outline: 1px solid var(--color-peppermint);
-    outline-offset: 4px;
-    border-radius: 1px;
+  outline: 1px solid var(--color-peppermint);
+  outline-offset: 4px;
+  border-radius: 1px;
 }

@@ -4,46 +4,52 @@ import { ArrowUpRight } from "@lucide/astro";
 ---
 
 <Layout>
-    <h1>projects</h1>
+  <h1>projects</h1>
 
-    <div class="flex flex-col gap-4">
-        <div>
-            <div
-                class="relative w-full items-center flex flex-row after:h-px after:w-full after:bg-primary/20 after:absolute after:z-1"
-            >
-                <a href="https://mobtimer.natlus.dev" class="bg-white dark:bg-black z-2 pr-1">mobtimer</a>
-                <span class="text-muted bg-white dark:bg-black z-2 px-1">react</span>
-                <a
-                    href="https://github.com/natlus/mobtimer-ol"
-                    class="text-muted! hover:text-orange! inline-flex flex-row items-center gap-05 ml-auto bg-white dark:bg-black z-2 pl-1"
-                >
-                    github <ArrowUpRight size={16} />
-                </a>
-            </div>
-            <span>manage mob programming.</span>
-        </div>
-
-        <div>
-            <div
-                class="relative w-full items-center flex flex-row after:h-px after:w-full after:bg-primary/20 after:absolute after:z-1"
-            >
-                <span class="bg-white dark:bg-black z-2 pr-1 text-orange">dotfiles</span>
-                <span class="text-muted bg-white dark:bg-black z-2 px-1">config</span>
-                <a
-                    href="https://github.com/natlus/dotfiles"
-                    class="text-muted! hover:text-orange! inline-flex flex-row items-center gap-05 ml-auto bg-white dark:bg-black z-2 pl-1"
-                >
-                    github <ArrowUpRight size={16} />
-                </a>
-            </div>
-            <span>my computer configuration managed with gnu stow.</span>
-            <ul class="list-disc list-inside py-1 px-2">
-                <li><span class="text-orange">aerospace</span> - window tiling manager</li>
-                <li><span class="text-orange">ghostty</span> - terminal emulator</li>
-                <li><span class="text-orange">helix</span> - terminal code editor</li>
-                <li><span class="text-orange">zed</span> - code editor</li>
-                <li><span class="text-orange">zsh</span> - terminal shell</li>
-            </ul>
-        </div>
+  <div class="flex flex-col gap-4">
+    <div>
+      <div
+        class="after:bg-primary/20 relative flex w-full flex-row items-center after:absolute after:z-1 after:h-px after:w-full"
+      >
+        <a
+          href="https://mobtimer.natlus.dev"
+          class="z-2 bg-white pr-1 dark:bg-black">mobtimer</a
+        >
+        <span class="text-muted z-2 bg-white px-1 dark:bg-black">react</span>
+        <a
+          href="https://github.com/natlus/mobtimer-ol"
+          class="text-muted! hover:text-orange! gap-05 z-2 ml-auto inline-flex flex-row items-center bg-white pl-1 dark:bg-black"
+        >
+          github <ArrowUpRight size={16} />
+        </a>
+      </div>
+      <span>manage mob programming.</span>
     </div>
+
+    <div>
+      <div
+        class="after:bg-primary/20 relative flex w-full flex-row items-center after:absolute after:z-1 after:h-px after:w-full"
+      >
+        <span class="text-orange z-2 bg-white pr-1 dark:bg-black">dotfiles</span
+        >
+        <span class="text-muted z-2 bg-white px-1 dark:bg-black">config</span>
+        <a
+          href="https://github.com/natlus/dotfiles"
+          class="text-muted! hover:text-orange! gap-05 z-2 ml-auto inline-flex flex-row items-center bg-white pl-1 dark:bg-black"
+        >
+          github <ArrowUpRight size={16} />
+        </a>
+      </div>
+      <span>my computer configuration managed with gnu stow.</span>
+      <ul class="list-inside list-disc px-2 py-1">
+        <li>
+          <span class="text-orange">aerospace</span> - window tiling manager
+        </li>
+        <li><span class="text-orange">ghostty</span> - terminal emulator</li>
+        <li><span class="text-orange">helix</span> - terminal code editor</li>
+        <li><span class="text-orange">zed</span> - code editor</li>
+        <li><span class="text-orange">zsh</span> - terminal shell</li>
+      </ul>
+    </div>
+  </div>
 </Layout>

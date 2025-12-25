@@ -11,20 +11,20 @@ import "../styles/global.css";
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>natlus</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>natlus</title>
+  </head>
 
-    <body class="px-2">
-        <main class="max-w-100 mx-auto">
-            <Header />
-            <article class="font-mono py-4">
-                <slot />
-            </article>
-        </main>
-    </body>
+  <body class="px-2">
+    <main class="mx-auto max-w-100">
+      <Header />
+      <article class="py-4 font-mono">
+        <slot />
+      </article>
+    </main>
+  </body>
 </html>
