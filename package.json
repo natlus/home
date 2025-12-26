@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
-    "@fontsource-variable/bricolage-grotesque": "^5.2.10",
     "@fontsource-variable/geist-mono": "^5.2.7",
-    "@fontsource/outfit": "^5.2.8",
-    "@fontsource/poppins": "^5.2.7",
     "@lucide/astro": "^0.562.0",
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.7",
