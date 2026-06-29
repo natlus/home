@@ -1,5 +1,6 @@
 ---
 import NavLink from "./nav-link";
+import {ArrowUpRight} from "@lucide/astro";
 ---
 
 <header class="py-3">
@@ -10,8 +11,8 @@ import NavLink from "./nav-link";
     <NavLink client:load href="/projects" shortcut="p">
       <span>[p]</span><span>projects</span>
     </NavLink>
-    <NavLink client:load href="https://github.com/natlus" shortcut="g">
-      <span>[g]</span><span>github</span>
+    <NavLink client:load href="https://github.com/natlus" target="_blank" shortcut="g">
+      <span>[g]</span><span>github</span><ArrowUpRight size={16} />
     </NavLink>
   </nav>
 </header>
