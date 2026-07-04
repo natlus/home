@@ -24,7 +24,7 @@ export default function NavLink({
   return (
     <a
       href={href}
-      className="text-primary! hover:text-orange! flex flex-row gap-[2px]"
+      className="text-primary! hover:text-orange! flex flex-row gap-[6px]"
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
     >
