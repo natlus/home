@@ -12,12 +12,10 @@
   h1 {
     @apply text-xl;
     @apply mb-2;
-    @apply underline;
   }
   h2 {
     @apply text-xl;
     @apply mb-2;
-    @apply underline;
   }
   h3 {
     @apply text-3xl;
