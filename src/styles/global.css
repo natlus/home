@@ -4,21 +4,22 @@
   --font-mono: "Geist Mono Variable", "monospace";
   --color-peppermint: var(--peppermint);
   --color-orange: var(--orange);
-  --color-primary: #fff;
-  --color-muted: var(--color-zinc-500);
+  --color-primary: var(--primary);
+  --color-muted: var(--color-zinc-400);
+	--color-background: var(--background);
 }
 
 @layer utilities {
   h1 {
-    @apply text-xl;
+    @apply text-2xl;
     @apply mb-2;
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl;
     @apply mb-2;
   }
   h3 {
-    @apply text-3xl;
+    @apply text-2xl;
     @apply mb-2;
   }
   h4 {
@@ -26,7 +27,7 @@
     @apply mb-2;
   }
   h5 {
-    @apply text-xl;
+    @apply text-2xl;
     @apply mb-2;
   }
 }
@@ -49,23 +50,26 @@ body {
   --drop-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   --spacing: 8px;
   --backdrop-filter: blur(1px);
-
   --peppermint: #99ffe4;
   --orange: #ff7f20;
+	--primary: #101010;
+	--background: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --peppermint: #99ffe4;
     --orange: #ffc799;
+	  --primary: #ffffff;
+	  --background: #101010;
   }
 
   html {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--color-primary);
+    background: var(--color-background);
   }
 }
 
