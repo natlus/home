@@ -29,7 +29,12 @@ import { ArrowUpRight } from "@lucide/astro";
       <div
         class="after:bg-primary/20 relative flex w-full flex-row items-center after:absolute after:z-1 after:h-px after:w-full"
       >
-        <span class="text-orange bg-background z-2 pr-1">dotfiles</span>
+        <a
+          href="https://github.com/natlus/dotfiles"
+          class="text-orange bg-background z-2 pr-1"
+        >
+          dotfiles
+        </a>
         <span class="text-muted bg-background z-2 px-1">config</span>
         <a
           href="https://github.com/natlus/dotfiles"
@@ -40,13 +45,12 @@ import { ArrowUpRight } from "@lucide/astro";
       </div>
 
       <span>my computer configuration managed with gnu stow.</span>
-      <ul class="list-inside list-disc px-2 py-1">
-        <!-- prettier-ignore -->
-        <li><span class="text-orange">aerospace</span> - window tiling manager</li>
-        <li><span class="text-orange">ghostty</span> - terminal emulator</li>
-        <li><span class="text-orange">zsh</span> - terminal shell</li>
-        <li><span class="text-orange">neovim</span> - code editor</li>
-      </ul>
+
+      <div
+        class="text-muted *:not(:last):after:content-[','] flex flex-row gap-1 text-sm"
+      >
+        aerospace, ghostty, zsh, neovim, herdr, opencode
+      </div>
     </div>
   </div>
 </Layout>
